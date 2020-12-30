@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student details</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+<!-- 
+	<h2>welcome student details</h2> -->
+	<!-- <div class="container">
+		<div class="card mt-5 mx-auto col-md-6">
+			<div class="card-header mt-1">
+				<h2>Student Details</h2>
+			</div>
+			<div class="card-body">
+				<form action="#" method="post">
+		{% csrf_token %}
+
+		{{form.as_p}}
+		<div class="card-footer">
+			<input type="submit" class="btn btn-outline-success" name="submit" value="Register">
+		</div>
+
+		
+		
+	</form>
+				
+			</div>
+			
+		</div>
+		
+	</div> -->
+
+	<div class="container">
+		<div class="card mt-5 mx-auto col-md-6">
+			<div class="card-body">
+        <h2 class="bg-dark text-white text center p-2 border-rounded">Student Registration Form</h2>
+					<form action="#" method="POST">
+						{% csrf_token %}
+						
+						<label for="name"><b>Name</b></label>
+						<input type="text"  class="form-control my-2" placeholder="enter name" name="name">
+						<label for="password"><b>password</b></label>
+						<input type="password"  class="form-control my-2" placeholder="enter password" name="password">
+						<label for="rollno"><b>Rollno</b></label>
+						<input type="text" class="form-control my-2" placeholder="enter rollno" name="rollno">
+						<label for="email"><b>Email</b></label>
+						<input type="email" class="form-control my-2"  placeholder="enter email" name="email">
+						<label for="collegename"><b>collegename</b></label>
+						<input type="text" class="form-control my-2"  placeholder="enter collegename" name="collegename">
+						<label for="department"><b>department</b></label>
+						<select name="department" class="form-control my-2">
+							<option value="" selected>---------</option>
+
+  							<option value="CSE">CSE</option>
+
+  							<option value="EEE">EEE</option>
+
+  							<option value="ECE">ECE</option>
+
+  							<option value="IT">IT</option>
+
+  							<option value="CIVIL">CIVIL</option>
+
+ 							 <option value="Mech">Mech</option>
+
+						</select>
+						
+						<div class="card-footer bg-primary">
+							<input type="submit" class="btn btn-outline-success" name="submit" value="Register">
+		
+						</div>
+						
+					</form>
+			</div>
+		
+		</div>
+		
+	</div>
+	
+
+</body>
+</html>
